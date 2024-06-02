@@ -45,7 +45,7 @@ public class RemotePlayer : MonoBehaviour
 
     private IEnumerator GetOppositeState(string lobbyCode, string myUsername)
     {
-        UriBuilder baseUri = new UriBuilder($"http://150.230.22.20:25567/api/v1/game/lobby/code/{lobbyCode}/game-state/");
+        UriBuilder baseUri = new UriBuilder($"https://rps.ph3.ru/api/v1/game/lobby/code/{lobbyCode}/game-state/");
         var query = HttpUtility.ParseQueryString(baseUri.Query);
         query["player_name"] = myUsername;
         query["player_skin"] = GlobalState.LeftPlayerInfo.SelectedCharSkin;

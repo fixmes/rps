@@ -178,7 +178,7 @@ public class PlayerSideController : MonoBehaviour
         int choice = (int)playerState.currentChoose;
         string lobbyCode = GlobalState.lobbyCode;
 
-        UriBuilder baseUri = new UriBuilder($"http://150.230.22.20:25567/api/v1/game/lobby/code/{lobbyCode}/game-state/choose/{choice}/?player_name=1");
+        UriBuilder baseUri = new UriBuilder($"https://rps.ph3.ru/api/v1/game/lobby/code/{lobbyCode}/game-state/choose/{choice}/?player_name=1");
         var query = HttpUtility.ParseQueryString(baseUri.Query);
         query["player_name"] = playerState.name;
         baseUri.Query = query.ToString();
